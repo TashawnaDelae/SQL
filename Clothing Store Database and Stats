@@ -1,0 +1,25 @@
+--Create a store database
+
+
+CREATE TABLE Alex_clothes(id integer PRIMARY KEY,Gender TEXT,bottom_type TEXT,color TEXT,price integer,size integer
+
+);
+insert into Alex_clothes values (1,'M','Jeans','Blue', 25.00, 30);
+insert into Alex_clothes values (2,'M','Jeans','Blue', 50.00, 32);
+insert into Alex_clothes values (3,'M','Jeans','Blue', 25.00, 34);
+insert into Alex_clothes values (4,'M','Jeans','Green', 5.00, 30);
+insert into Alex_clothes values (5,'M','Jeans','Black', 90.00, 30);
+insert into Alex_clothes values (6,'M','Jeans','Red', 80.00, 30);
+insert into Alex_clothes values (7,'M','Jeans','Red', 80.00, 32);
+insert into Alex_clothes values (8,'F','Skirt','Green', 100.00, 26);
+insert into Alex_clothes values (9,'F','Skirt','Red', 110.00, 26);
+insert into Alex_clothes values (10,'F','Skirt','Green', 100.00, 26);
+insert into Alex_clothes values (11,'F','Shorts','Green', 100.00, 26);
+insert into Alex_clothes values (12,'F','Shorts','Blue', 160.00, 26);
+insert into Alex_clothes values (13,'F','Jeans','Blue', 150.00, 28);
+insert into Alex_clothes values (14,'F','Jeans','Blue', 150.00, 30);
+insert into Alex_clothes values (15,'F','Jeans', 'Black', 160.00, 30);
+
+select * from Alex_clothes order by price;
+
+select bottom_type, sum(price) from Alex_clothes group by bottom_type
